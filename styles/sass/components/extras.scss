@@ -1,0 +1,57 @@
+.extras{
+    height: 85vh;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .extras-subtext{
+        width: 40%;
+        text-align: center;
+    }
+
+    &__items{
+        height: 65%;
+        width: 90%;
+        display: flex;
+        flex-direction: row;
+        margin-top: 6rem;
+        // margin: 0 auto;
+        // justify-content: center;
+
+        &--item{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex: 1;
+            font-size: 1.4rem;
+            position: relative;
+            text-align: center;
+
+            .icon{
+                position: relative;
+                height: 10rem;
+                width: 10rem;
+                border-radius: 50rem;
+                overflow: hidden;
+            }
+
+            .extras--btn{
+                border: none;
+                width: 10rem;
+                font-size: 1.2rem;
+                letter-spacing: .5px;
+                background: none;
+                color: $color-primary;
+                text-decoration: underline;
+                cursor: pointer;
+            }
+
+            & p {
+                width: 80%;
+            }
+        }
+    }
+
+}

@@ -1,0 +1,133 @@
+.hero {
+  background-color: $color-primary--light;
+  height: 85vh;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 15vh;
+  overflow: hidden;
+
+  &__text {
+    height: 100%;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 10rem;
+    font-size: 1.7rem;
+
+    &--header {
+      font-size: 3rem;
+      font-weight: 500;
+      margin-bottom: 0;
+    }
+    &--btn {
+      width: 8rem;
+      border: none;
+      background-color: $color-primary;
+      color: white;
+      margin-top: 2rem;
+    }
+
+    &--link {
+      font-size: 1.5rem;
+      & a {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__stars {
+    position: relative;
+    height: 100%;
+    width: 50%;
+    // overflow: hidden;
+    transform: rotateY(0deg);
+    animation: spin 1.5s linear;
+
+    .star {
+      position: absolute;
+      right: 5%;
+      bottom: 25%;
+      clip-path: polygon(
+        50% 0%,
+        61% 35%,
+        98% 35%,
+        68% 57%,
+        79% 91%,
+        50% 70%,
+        21% 91%,
+        32% 57%,
+        2% 35%,
+        39% 35%
+      );
+
+      height: 25rem;
+      width: 25rem;
+      background: linear-gradient(to right, $color-secondary, $color-white-dark);
+      z-index: 100;
+      background-size: 100rem 100%;
+      animation: shimmer 1s linear;
+      animation-delay: 1.5s;
+    }
+    .star-2 {
+      transform: scale(140%);
+      background: linear-gradient(to right, $color-primary, rgba($color-primary, .9) );
+      z-index: 99;
+    }
+    .star-3 {
+      transform: scale(180%);
+      background: linear-gradient(to right, $color-white, rgba($color-white, .9) );
+      z-index: 98;
+    }
+    .star-4 {
+      transform: scale(220%);
+      background: linear-gradient(to right, $color-primary--dark, rgba($color-primary--dark, .9) );
+      z-index: 97;
+    }
+    .star-5 {
+      transform: scale(260%);
+      background: linear-gradient(to right, $color-secondary, rgba($color-secondary, .9) );
+      z-index: 96;
+    }
+    .star-6 {
+      transform: scale(300%);
+      background: linear-gradient(to right, $color-primary, rgba($color-primary, .9) );
+      z-index: 95;
+    }
+    .star-7 {
+      transform: scale(340%);
+      background: linear-gradient(to right, $color-white, rgba($color-white, .9) );
+      z-index: 94;
+    }
+    .star-8 {
+      transform: scale(380%);
+      background: linear-gradient(to right, $color-primary--dark, rgba($color-primary--dark, .9) );
+      z-index: 93;
+    }
+    .star-9 {
+      transform: scale(420%);
+      background: linear-gradient(to right, $color-secondary, rgba($color-secondary, .9) );
+      z-index: 92;
+    }
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotateY(120deg);
+  }
+  100% {
+    transform: rotateY(0deg);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 75rem 0;
+  }
+  100% {
+    background-position: 100rem 0;
+  }
+}

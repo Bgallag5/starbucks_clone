@@ -1,0 +1,38 @@
+.btn{
+    padding: .6rem 1rem;
+    border-radius: 50rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4rem;
+    cursor: pointer;
+
+    &-locate{
+        background-color: white;
+        border: none;
+        gap: 1rem;
+    }
+    &-white{
+        background-color: white;
+        border: 1px solid black;
+        color: black
+    }
+    &-black{
+        background-color: black;
+        border: 1px solid black;
+        color: white;
+    }
+}
+
+
+.text-header{
+    font-size: 2.5rem;
+    font-weight: 500;
+    letter-spacing: .5px;
+}
+.text-subtext{
+    font-size: 1.4rem;
+    font-weight: 400;
+    letter-spacing: .1px;
+    line-height: 2rem;
+}
