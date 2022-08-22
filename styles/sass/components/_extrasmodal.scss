@@ -25,6 +25,10 @@ transition: all .3s ease-in-out;
   opacity: 100;
   transition: all .5s ease-in-out;
 
+  @include respond(phone){
+    width: 95vw;
+  }
+
   .modal--close{
     position: absolute;
     top: 1rem;
@@ -147,10 +151,12 @@ transition: all .3s ease-in-out;
         margin: auto 0;
         cursor: pointer;
         opacity: attr(data-page) !important;
+        visibility: visible;
 
         //if data-page is "1" opacity is 0
         &[data-page="1"] {
           opacity: 0;
+          visibility: hidden;
         }
       }
     }

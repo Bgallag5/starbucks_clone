@@ -8,6 +8,12 @@
   margin-top: 15vh;
   overflow: hidden;
 
+  @include respond (phone){
+    flex-direction: column;
+    align-items: center;
+    height: 75vh;
+  }
+
   &__text {
     height: 100%;
     width: auto;
@@ -17,9 +23,16 @@
     margin-left: 10rem;
     font-size: 1.7rem;
 
+    @include respond (phone){
+      z-index: 11; 
+      text-align: center;
+      align-items: center;
+      justify-content: flex-start;
+      width: 85%;
+      margin: 1rem 0rem;
+    }
+
     &--header {
-      font-size: 3rem;
-      font-weight: 500;
       margin-bottom: 0;
     }
     &--btn {
@@ -28,6 +41,10 @@
       background-color: $color-primary;
       color: white;
       margin-top: 2rem;
+
+      @include respond (phone){
+        margin-top: 1rem;
+      }
     }
 
     &--link {
@@ -45,6 +62,11 @@
     // overflow: hidden;
     transform: rotateY(0deg);
     animation: spin 1.5s linear;
+
+    @include respond (phone){
+      z-index: 10; 
+      width: 100%;
+    }
 
     .star {
       position: absolute;
@@ -70,6 +92,12 @@
       background-size: 100rem 100%;
       animation: shimmer 1s linear;
       animation-delay: 1.5s;
+
+      @include respond (phone){
+        bottom: 0%;
+        height: 10rem;
+        width: 10rem;
+      }
     }
     .star-2 {
       transform: scale(140%);

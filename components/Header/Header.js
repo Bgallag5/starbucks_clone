@@ -15,7 +15,6 @@ export default function Header() {
         navRef.current.childNodes.forEach(el => {
             el.classList.remove("nav--active")
         })
-        e.preventDefault();
         e.target.classList.add('nav--active')
     }
 

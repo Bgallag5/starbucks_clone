@@ -1,6 +1,7 @@
 .start{
-    // min-height: 60vh;
-    height: 60vh;
+    min-height: 60vh;
+    // height: 60vh;
+    height: auto;
     margin-bottom: 8rem;
     display: flex;
     flex-direction: column;
@@ -16,6 +17,12 @@
         gap: 1rem;
         width: 85%;
         margin-top: 6rem;
+
+        @include respond(phone){
+            flex-direction:  column;
+            text-align: center;
+            margin-top: 1rem;
+        }
 
         &--step{
             // width: 33%;
@@ -42,6 +49,10 @@
                 // font-size: clamp(1rem, 2.5vw, 1.5rem);
                 width: 75%;
                 text-align: center;
+
+                @include respond (phone){
+                    width: 100%;
+                }
             }
         }
     }
