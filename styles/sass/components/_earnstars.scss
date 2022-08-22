@@ -22,7 +22,7 @@
   &__rewards {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    // align-items: center;
     width: 80%;
     min-height: 20rem;
     height: auto;
@@ -31,7 +31,7 @@
 
     @include respond(phone) {
       flex-direction: column;
-      // height: 100vh;
+      text-align: left;
       height: auto;
       width: 95%;
     }
@@ -43,9 +43,8 @@
       flex-direction: column;
 
       @include respond(phone) {
-        height: auto;
+        height: 100%;
         width: 85%;
-        text-align: left;
         margin-bottom: 2rem;
       }
     }

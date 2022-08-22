@@ -154,9 +154,16 @@ button {
   font-size: 1.2rem;
   font-weight: 600;
   display: flex;
+  align-items: center;
 }
 .header__bottom p {
   margin-left: 20rem;
+}
+@media only screen and (max-width: 600px) {
+  .header__bottom p {
+    margin-left: 2rem;
+    font-size: 1rem;
+  }
 }
 
 .nav--active {
@@ -621,7 +628,6 @@ button {
 .earn__rewards {
   display: flex;
   flex-direction: row;
-  align-items: center;
   width: 80%;
   min-height: 20rem;
   height: auto;
@@ -631,6 +637,7 @@ button {
 @media only screen and (max-width: 600px) {
   .earn__rewards {
     flex-direction: column;
+    text-align: left;
     height: auto;
     width: 95%;
   }
@@ -643,9 +650,8 @@ button {
 }
 @media only screen and (max-width: 600px) {
   .earn__rewards .rewards__title {
-    height: auto;
+    height: 100%;
     width: 85%;
-    text-align: left;
     margin-bottom: 2rem;
   }
 }
@@ -831,7 +837,7 @@ button {
   height: 1.5rem;
   width: 1.5rem;
   background-color: #777;
-  border-radius: 100rem;
+  border-radius: 200rem;
 }
 .extras__modal--nav .navigation .nav--dot--active {
   background-color: #333;

@@ -80,8 +80,14 @@
     font-size: 1.2rem;
     font-weight: 600;
     display: flex;
+    align-items: center;
     & p {
       margin-left: 20rem;
+
+      @include respond(phone){
+      margin-left: 2rem;
+      font-size: 1rem;
+      }
     }
   }
 }
