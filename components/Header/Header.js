@@ -18,8 +18,9 @@ export default function Header() {
   };
 
   const handleHamburgerMenuClick = () => {
-    let hamburgerMenu = document.querySelector('.mobile__nav');
-    hamburgerMenu.classList.add('mobile__nav-active')
+    return
+    // let hamburgerMenu = document.querySelector('.mobile__nav');
+    // hamburgerMenu.classList.add('mobile__nav-active')
   }
 
   return (
