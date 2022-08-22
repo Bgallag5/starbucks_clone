@@ -6,6 +6,7 @@ body {
   margin: 0;
 //   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   width: 100vw;
+  max-width: 100vw;
   overflow-x: hidden;
   font-size: 10px;
   font-family: "Montserrat", sans-serif;
@@ -31,3 +32,7 @@ button{
   background: lightblue !important;
   z-index: 9999;
 }
+
+// .app-container{
+//   max-width: 100vw;
+// }

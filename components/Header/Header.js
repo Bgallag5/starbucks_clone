@@ -3,6 +3,7 @@ import Image from "next/image";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLocationDot, faBars } from "@fortawesome/free-solid-svg-icons";
+import MobileNav from "../MobileNav/MobileNav";
 
 import Logo from "../../assets/images/logo.webp";
 
@@ -17,10 +18,9 @@ export default function Header() {
     e.target.classList.add("nav--active");
   };
 
-  const handleHamburgerMenuClick = () => {
-    return
-    // let hamburgerMenu = document.querySelector('.mobile__nav');
-    // hamburgerMenu.classList.add('mobile__nav-active')
+  const handleHamburgerMenuClick = (e) => {
+    let hamburgerMenu = document.querySelector('.mobile__nav');
+    hamburgerMenu.classList.add('mobile__nav-active')
   }
 
   return (
@@ -53,6 +53,7 @@ export default function Header() {
           <button className="btn btn-white">Sign In</button>
           <button className="btn btn-black">Join Now</button>
         </div>
+        <MobileNav />
         <FontAwesomeIcon onClick={(e) => handleHamburgerMenuClick(e)} className="hamburger-menu" icon={faBars} />
       </div>
       <div className="header__bottom">
