@@ -9,9 +9,9 @@ export default function RewardsSlide(props) {
         <div className="slide__img">
             <Image  src={require(`../../assets/images/${img}`)} alt={"menu-item"} layout='fill' />
         </div>
-        <div className="slide__text">
+        <div className="slide__text ">
             <h2 className=''>{title}</h2>
-            <p>{subtext}</p>
+            <p className='text-subtext'>{subtext}</p>
         </div>
     </div>
   )

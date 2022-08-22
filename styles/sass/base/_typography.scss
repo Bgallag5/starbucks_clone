@@ -1,0 +1,48 @@
+:root {
+  --fs-sm: 1.4rem;
+  --fs-md: 1.6rem;
+  --fs-lg: 1.8rem;
+  --fs-xl: 2.5rem;
+}
+
+
+
+@include respond(phone) {
+    :root{
+        --fs-sm: 1.4rem;
+        --fs-md: 1.8rem;
+        --fs-lg: 2rem;
+        --fs-xl: 2.8rem;
+    }
+  
+}
+
+.text-header {
+  font-size: var(--fs-xl);
+  font-weight: 500;
+  letter-spacing: 0.5px;
+
+  @include respond(phone) {
+    text-align: center;
+  }
+}
+
+.text-subheader{
+    font-size: var(--fs-md);
+    font-weight: 600;
+    margin: 0;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.text-subtext {
+  font-size: var(--fs-sm);
+  font-weight: 400;
+  letter-spacing: 0.1px;
+  line-height: 2rem;
+
+  @include respond(phone) {
+    line-height: normal;
+    text-align: center;
+  }
+}

@@ -17,25 +17,25 @@ export default function Extras() {
                 <div className='icon'>
                     <Image layout='fill' src={require('../../assets/images/rewards1.webp')} alt={"extra"} />
                 </div>
-                <h3>Fun Freebies</h3>
-                <p>Not only can you earn free coffee, look forward to a birthday treat plus coffee and tea refills.</p>
-                <button onClick={() => showModal()} className='btn extras--btn '>Learn More</button>
+                <h3 className='text-subheader'>Fun Freebies</h3>
+                <p className='text-subtext'>Not only can you earn free coffee, look forward to a birthday treat plus coffee and tea refills.</p>
+                <button onClick={() => showModal()} className='btn  extras--btn text-subtext'>Learn More</button>
             </div>
             <div className="extras__items--item">
                 <div className='icon'>
                     <Image layout='fill' src={require('../../assets/images/rewards2.webp')} alt={"extra"} />
                 </div>
-                <h3>Order & pay ahead</h3>
-                <p>Enjoy the convenience of in-store, curbside or drive-thru pickup at select stores.</p>
-                <button onClick={() => showModal()}  className='btn extras--btn '>Learn More</button>
+                <h3 className='text-subheader'>Order & pay ahead</h3>
+                <p className='text-subtext'>Enjoy the convenience of in-store, curbside or drive-thru pickup at select stores.</p>
+                <button onClick={() => showModal()}  className='btn extras--btn text-subtext '>Learn More</button>
             </div>
             <div className="extras__items--item">
                 <div className='icon'>
                     <Image layout='fill' src={require('../../assets/images/rewards3.webp')} alt={"extra"} />
                 </div>
-                <h3>Get to free faster</h3>
-                <p>Earn Stars even quicker with Bonus Star challenges, Double Star Days and exciting games.</p>
-                <button onClick={() => showModal()}  className='btn extras--btn '>Learn More</button>
+                <h3 className='text-subheader'>Get to free faster</h3>
+                <p className='text-subtext'>Earn Stars even quicker with Bonus Star challenges, Double Star Days and exciting games.</p>
+                <button onClick={() => showModal()}  className='btn extras--btn text-subtext '>Learn More</button>
             </div>
         </div>
     </div>

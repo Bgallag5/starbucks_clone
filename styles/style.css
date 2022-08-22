@@ -1,4 +1,51 @@
 @import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;1,200;1,500&family=Montserrat:ital,wght@0,100;0,300;0,400;0,500;1,100&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;1,300;1,400;1,700&display=swap");
+:root {
+  --fs-sm: 1.4rem;
+  --fs-md: 1.6rem;
+  --fs-lg: 1.8rem;
+  --fs-xl: 2.5rem;
+}
+
+@media only screen and (max-width: 600px) {
+  :root {
+    --fs-sm: 1.4rem;
+    --fs-md: 1.8rem;
+    --fs-lg: 2rem;
+    --fs-xl: 2.8rem;
+  }
+}
+.text-header {
+  font-size: var(--fs-xl);
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+@media only screen and (max-width: 600px) {
+  .text-header {
+    text-align: center;
+  }
+}
+
+.text-subheader {
+  font-size: var(--fs-md);
+  font-weight: 600;
+  margin: 0;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.text-subtext {
+  font-size: var(--fs-sm);
+  font-weight: 400;
+  letter-spacing: 0.1px;
+  line-height: 2rem;
+}
+@media only screen and (max-width: 600px) {
+  .text-subtext {
+    line-height: normal;
+    text-align: center;
+  }
+}
+
 html,
 body {
   padding: 0;
@@ -54,32 +101,6 @@ button {
   color: white;
 }
 
-.text-header {
-  font-size: 2.5rem;
-  font-weight: 500;
-  letter-spacing: 0.5px;
-}
-@media only screen and (max-width: 600px) {
-  .text-header {
-    font-size: 2rem;
-    text-align: center;
-  }
-}
-
-.text-subtext {
-  font-size: 1.4rem;
-  font-weight: 400;
-  letter-spacing: 0.1px;
-  line-height: 2rem;
-}
-@media only screen and (max-width: 600px) {
-  .text-subtext {
-    font-size: 1.3rem !important;
-    line-height: normal;
-    text-align: center;
-  }
-}
-
 .header {
   height: 15vh;
   width: 100%;
@@ -97,6 +118,7 @@ button {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  position: relative;
 }
 .header__top--nav {
   height: 10vh;
@@ -119,6 +141,12 @@ button {
   flex-direction: row;
   gap: 2rem;
   list-style: none;
+}
+@media only screen and (max-width: 600px) {
+  .header__top--nav ul {
+    display: none;
+    opacity: 0;
+  }
 }
 .header__top--nav ul li {
   cursor: pointer;
@@ -146,6 +174,29 @@ button {
   margin-right: 2rem;
   display: flex;
   gap: 2rem;
+}
+@media only screen and (max-width: 600px) {
+  .header__top--login {
+    display: none;
+    opacity: 0;
+  }
+}
+.header__top .hamburger-menu {
+  position: absolute;
+  font-size: 3.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 1rem;
+  opacity: 0;
+  display: none;
+  z-index: 1999;
+  cursor: pointer;
+}
+@media only screen and (max-width: 600px) {
+  .header__top .hamburger-menu {
+    display: block;
+    opacity: 100;
+  }
 }
 .header__bottom {
   height: 5vh;
@@ -228,7 +279,7 @@ button {
   flex-direction: column;
   justify-content: center;
   margin-left: 10rem;
-  font-size: 1.7rem;
+  z-index: 2;
 }
 @media only screen and (max-width: 600px) {
   .hero__text {
@@ -255,9 +306,6 @@ button {
     margin-top: 1rem;
   }
 }
-.hero__text--link {
-  font-size: 1.5rem;
-}
 .hero__text--link a {
   text-decoration: underline;
 }
@@ -267,6 +315,7 @@ button {
   width: 50%;
   transform: rotateY(0deg);
   animation: spin 1.5s linear;
+  z-index: 1;
 }
 @media only screen and (max-width: 600px) {
   .hero__stars {
@@ -359,7 +408,6 @@ button {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-size: 1.3rem;
 }
 .start__steps {
   display: flex;
@@ -372,7 +420,7 @@ button {
   .start__steps {
     flex-direction: column;
     text-align: center;
-    margin-top: 1rem;
+    margin-top: 4rem;
   }
 }
 .start__steps--step {
@@ -382,6 +430,14 @@ button {
   gap: 0.5rem;
   align-items: center;
   padding: 0.5rem;
+}
+@media only screen and (max-width: 600px) {
+  .start__steps--step {
+    margin: 0;
+    margin-bottom: 4rem;
+    padding: 0;
+    flex: 0;
+  }
 }
 .start__steps--step .step-num {
   font-size: 2rem;
@@ -480,6 +536,7 @@ button {
   display: flex;
   flex-direction: row;
   align-items: center;
+  gap: 1rem;
   background-color: #d4e9e2;
   transition: all 0.3s ease-in-out;
 }
@@ -491,14 +548,14 @@ button {
   }
 }
 .slide__img {
-  width: 50%;
+  width: 100%;
   height: 80%;
   position: relative;
   display: flex;
 }
 @media only screen and (max-width: 600px) {
   .slide__img {
-    width: 100%;
+    width: 85%;
   }
 }
 .slide__img img {
@@ -518,7 +575,6 @@ button {
   }
 }
 .slide__text h2 {
-  width: 50%;
   font-size: 2.2rem;
   font-weight: 500;
 }
@@ -692,14 +748,6 @@ button {
 .earn__rewards .rewards__box--content h2 {
   justify-self: flex-start;
   margin: 0;
-  font-size: 1.7rem;
-  font-weight: 500;
-}
-@media only screen and (max-width: 600px) {
-  .earn__rewards .rewards__box--content h2 {
-    font-size: 1.4rem;
-    font-weight: 500;
-  }
 }
 .earn__rewards .rewards__box--content p {
   width: 75%;
@@ -710,8 +758,6 @@ button {
 @media only screen and (max-width: 600px) {
   .earn__rewards .rewards__box--content p {
     width: 100%;
-    font-size: 1.3rem;
-    font-weight: 400;
   }
 }
 
@@ -880,6 +926,71 @@ button {
   opacity: 0;
   transform: translate(-50%, -50%) scale(125%);
   transition: all 0.5s ease-in-out;
+}
+
+.mobile__nav {
+  position: absolute;
+  height: 100vh;
+  width: 80vw;
+  top: 0;
+  right: 0;
+  background-color: #f1f8f6;
+  z-index: 2999;
+  display: flex;
+  flex-direction: column;
+  transform: translateX(150%);
+  transition: all 0.5s ease-in-out;
+}
+.mobile__nav > * {
+  padding-left: 4rem;
+}
+.mobile__nav--navbar {
+  width: 80%;
+  height: 40%;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.5);
+}
+.mobile__nav--navbar > * {
+  margin: 0;
+  cursor: pointer;
+}
+.mobile__nav--login {
+  width: 80%;
+  height: 35%;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  margin-top: 3rem;
+}
+.mobile__nav--login .login-btns {
+  display: flex;
+  flex-direction: row;
+  gap: 10%;
+}
+.mobile__nav--login .login-btns button {
+  width: 10rem;
+  height: 4rem;
+}
+
+.mobile__nav-active {
+  transform: translateX(0%) !important;
+  opacity: 100 !important;
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(150%);
+  }
+  100% {
+    opacity: 100;
+    transform: translateX(0%);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
