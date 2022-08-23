@@ -8,6 +8,10 @@
   justify-content: center;
   align-items: center;
 
+  @include respond (phone){
+    margin-top: 10rem;
+  }
+
   &__steps {
     display: flex;
     flex-direction: row;

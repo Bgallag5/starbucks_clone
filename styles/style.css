@@ -18,6 +18,7 @@
   font-size: var(--fs-xl);
   font-weight: 500;
   letter-spacing: 0.5px;
+  margin: 0 0.5rem;
 }
 @media only screen and (max-width: 600px) {
   .text-header {
@@ -30,7 +31,6 @@
   font-weight: 600;
   margin: 0;
   margin-top: 1rem;
-  text-align: center;
 }
 
 .text-subtext {
@@ -136,6 +136,12 @@ button {
 .header__top--nav .header--logo img {
   object-fit: cover;
 }
+@media only screen and (max-width: 600px) {
+  .header__top--nav .header--logo {
+    width: 12rem;
+    height: 85%;
+  }
+}
 .header__top--nav ul {
   height: 100%;
   display: flex;
@@ -190,7 +196,7 @@ button {
   right: 1rem;
   opacity: 0;
   display: none;
-  z-index: 1999;
+  z-index: 999;
   cursor: pointer;
 }
 @media only screen and (max-width: 600px) {
@@ -409,6 +415,11 @@ button {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+@media only screen and (max-width: 600px) {
+  .start {
+    margin-top: 10rem;
+  }
 }
 .start__steps {
   display: flex;
@@ -879,6 +890,10 @@ button {
 .extras__modal--nav .navigation .nav--button--icon {
   pointer-events: none;
 }
+.extras__modal--nav .navigation .nav--button-right[data-page="2"] {
+  opacity: 0;
+  visibility: hidden;
+}
 .extras__modal--nav .navigation .nav--dot {
   border: none;
   height: 1.5rem;
@@ -929,6 +944,19 @@ button {
   transition: all 0.5s ease-in-out;
 }
 
+.mobile__nav--container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.4);
+  transform: translateX(150%);
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+  z-index: 2999;
+}
+
 .mobile__nav {
   position: fixed;
   height: 100vh;
@@ -941,10 +969,18 @@ button {
   flex-direction: column;
   transform: translateX(150%);
   transition: all 0.5s ease-in-out;
-  opacity: 0;
 }
 .mobile__nav > * {
   padding-left: 4rem;
+}
+.mobile__nav--close {
+  padding: 0;
+  position: absolute;
+  top: 3rem;
+  right: 3rem;
+  display: flex;
+  font-size: 2.5rem;
+  font-weight: 300;
 }
 .mobile__nav--navbar {
   width: 80%;
@@ -983,6 +1019,13 @@ button {
   transform: translateX(0%);
   opacity: 100 !important;
   animation: slideIn 0.5s ease-in-out;
+}
+
+.nav--container-active {
+  transform: translateX(0%);
+  opacity: 100;
+  visibility: visible;
+  display: flex;
 }
 
 @keyframes slideIn {

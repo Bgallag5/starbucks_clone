@@ -100,7 +100,7 @@ export default function ExtrasModal() {
             <button className="nav--button" onClick={(e) => handleNavClick(e)} data-direction={'left'}><FontAwesomeIcon className="nav--button--icon" icon={faAngleLeft} /></button>
             <button onClick={() => setModalPage(1)} className={`nav--dot ${modalPage === 1 ? "nav--dot--active" : ""}`}></button>
             <button onClick={() => setModalPage(2)}  className={`nav--dot ${modalPage === 2 ? "nav--dot--active" : ""}`}></button>
-            <button className="nav--button"  onClick={(e) => handleNavClick(e)} data-direction={'right'}><FontAwesomeIcon className="nav--button--icon" icon={faAngleRight} /></button>
+            <button className="nav--button nav--button-right"  onClick={(e) => handleNavClick(e)} data-direction={'right'} data-page={modalPage} ><FontAwesomeIcon className="nav--button--icon" icon={faAngleRight} /></button>
           <button onClick={() => closeModal()} data-page={modalPage} className="nav--ok">Ok</button>
           </div>
         </div>

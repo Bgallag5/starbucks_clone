@@ -32,6 +32,11 @@
         & img{
             object-fit: cover;
         }
+
+        @include respond(phone){
+          width: 12rem;
+          height: 85%;
+      }
       }
       & ul {
         height: 100%;
@@ -91,7 +96,7 @@
       right: 1rem;
       opacity: 0;
       display: none;
-      z-index: 1999;
+      z-index: 999;
       cursor: pointer;
 
       @include respond(phone){

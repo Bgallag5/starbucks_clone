@@ -120,6 +120,11 @@ transition: all .3s ease-in-out;
         &--icon {
           pointer-events: none;
         }
+
+        &-right[data-page="2"]{
+          opacity: 0;
+          visibility: hidden;
+        }
       }
 
       .nav--dot {
