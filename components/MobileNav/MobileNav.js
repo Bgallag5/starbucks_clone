@@ -26,8 +26,8 @@ export default function MobileNav() {
     mobileNavRef.current.addEventListener("touchmove", (e) => {
       let threshold = e.touches[0].clientX - swipeLengthRef.current;
 
-      //if threshold is twice the width of nav - close nav
-      if (threshold * 2 >= modalWidth) {
+      //if threshold is 1/3 the width of nav - close nav
+      if (threshold * 3 >= modalWidth) {
         closeMobileNav(e);
       }
     });
